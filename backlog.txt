@@ -4,15 +4,15 @@ Project Manager:  Mariam Hersi
 Developers: Muna Muhumed and Ukubat Elmi 
 Designers:  Nawal Ali 
 Testers:  Samsam Abdi 
-Requirements 
 
+Requirements 
 Show a list of countries. 
 Display country details like population, capital, and tourist destinations.  
 Give users the option to sort countries by population.  
 Show a list of cities within each country with their population 
 Give users the option to sort cities by population. 
-Tasks 
 
+Tasks 
 Set up project environment (development, testing). 
 Design user interface for country and city pages. 
 Implement backend logic to fetch country and city data. 
@@ -24,9 +24,9 @@ Test application for functionality and bugs.
 Project Scope 
 
 Main features include displaying country and city data, sorting functionality, and population reports. 
- Additional features may include search functionality, language support, and user authentication. 
+Additional features may include search functionality, language support, and user authentication. 
+
 Risks 
 
 Potential risks include data accuracy issues, performance issues with large datasets, and security vulnerabilities. 
 Mitigation strategies include thorough testing, using reliable data sources, and implementing security measures. 
-  
