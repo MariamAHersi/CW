@@ -23,10 +23,8 @@ Test application for functionality and bugs.
  
 Project Scope 
 
-Main features include displaying country and city data, sorting functionality, and population reports. 
-Additional features may include search functionality, language support, and user authentication. 
+Main features include displaying country and city data, sorting functionality, and population reports. We plan on adding additional features such as include search functionality, language support, and user authentication. 
 
 Risks 
 
-Potential risks include data accuracy issues, performance issues with large datasets, and security vulnerabilities. 
-Mitigation strategies include thorough testing, using reliable data sources, and implementing security measures. 
+Potential risks include data accuracy issues, performance issues with large datasets, and security risks. We can prevent this risks by thorogugh testing, using reliable data sources and implementing security measure 
