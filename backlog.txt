@@ -1,7 +1,7 @@
 Group roles 
 Project Manager:  Mariam Hersi 
 Scrum master:  Ukubat Elmi 
-Developers: Muna Muhumed and Ukubat Elmi 
+Developers: Muna Muhumed 
 Designers:  Nawal Ali 
 Testers:  Samsam Abdi 
 
