@@ -1,4 +1,4 @@
-CODE OF CONDUCT: 
+                                                   CODE OF CONDUCT
 
 Respectful Interaction: We uphold an environment where every team member shows respect and appreciation for one another's ideas and contributions, regardless of differences in opinion. 
 
@@ -10,7 +10,7 @@ Punctuality and Meetings: Our team holds meetings twice a week: in person on Mon
 
 Dedication and Time: We recognize that our project's success is contingent on each team member's dedication and commitment. Each member is expected to put some time aside and contribute to discussions and complete their assigned tasks to the best of their abilities. Additionally, meeting set deadlines for task completion is a shared expectation for all team members. 
 
- Accountability and Support: As a team, we must hold ourselves accountable for the completion of tasks and offer support to our fellow members with any complications they may encounter during the project's execution. 
+Accountability and Support: As a team, we must hold ourselves accountable for the completion of tasks and offer support to our fellow members with any complications they may encounter during the project's execution. 
 
 Confidentiality: We understand the importance of maintaining the confidentiality of sensitive information shared during our meetings. Each team member is responsible for upholding the privacy and integrity of such information, creating an environment of trust and collaboration. 
 
