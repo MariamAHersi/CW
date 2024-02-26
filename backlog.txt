@@ -1,9 +1,8 @@
 Group roles 
-Project Manager:  Mariam Hersi 
-Scrum master:  Ukubat Elmi 
-Developers: Muna Muhumed 
-Designers:  Nawal Ali 
-Testers:  Samsam Abdi 
+Project Owner:  Mariam Hersi 
+Scrum Master: Ukubat Elmi 
+Team Members: Muna Muhumed, Nawal Ali and Samsam Abdi 
+ 
 
 Requirements 
 Show a list of countries. 
