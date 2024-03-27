@@ -1,3 +1,5 @@
+import mysql from "mysql/promises";
+
 /* Import dependencies */
 const express = require("express");
 const mysql = require("mysql2");
@@ -12,22 +14,49 @@ app.set('view engine', 'pug');
 //Serve assets from 'static' folder
 app.use(express.static("static"));
 
+// Login route
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+
+  // Dummy authentication logic (replace with your actual authentication logic)
+  const user = users.find(user => user.username === username && user.password === password);
+
+  if (user) {
+      // Redirect to home page upon successful login
+      res.redirect('/home');
+  } else {
+      // Handle invalid credentials (e.g., render login page with error message)
+      res.render('login', { error: 'Invalid username or password' });
+  }
+});
+
 // Create a route for root
-app.get("/", function(req, res) => {
-  res.render("index"),
+app.get("/login", (req, res) => {
+  res.render("login");
 });
 
-// Sample API route
-app.get("/ping", (req, res) => {
-  res.send("pong");
+// Create a route for root
+app.get("/home", (req, res) => {
+  res.render("home");
 });
 
-// Returns an array of cities from the database
-app.get("/cities", (req, res) => {
-  db.execute("SELECT * FROM `city`", (err, rows, fields) => {
-    console.log(`/cities: ${rows.length} rows`);
-    return res.send(rows);
-  });
+// Create a route for root
+app.get("/reports", (req, res) => {
+  res.render("reports");
+});
+
+app.get("/cities", async (req, res) => {
+  try { 
+    const [rows, field] = await db.execute("SELECT * FROM `city`");
+    return res.render("cities", {rows, fields});
+  } catch(err) {
+    console.error(err);
+  }
+});
+
+// Create a route for root
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 // Run server!
