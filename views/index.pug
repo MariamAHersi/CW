@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  // Header
+  header
+    h1 Welcome to Your World Data Application
+    p Explore world data on countries, cities, and capitals.
+  
+  // Navigation links
+  nav
+    ul
+      li: a(href='/countries') Countries
+      li: a(href='/cities') Cities
+      li: a(href='/capitals') Capitals
+
+  // Main content section
+  main
+    // Section for countries
+    section
+      h2 Countries
+      p View information about different countries around the world.
+      p: a(href='/countries') View Countries
+
+    // Section for cities
+    section
+      h2 Cities
+      p Discover details about various cities across the globe.
+      p: a(href='/cities') View Cities
+
+    // Section for capitals
+    section
+      h2 Capitals
+      p Explore the capital cities of different countries.
+      p: a(href='/capitals') View Capitals
+
+  // Footer
+  footer
+    p © 2024 Your World Data Application. All rights reserved.
