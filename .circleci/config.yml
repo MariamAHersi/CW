@@ -1,26 +1,14 @@
 version: 2.1
 
 jobs:
-  build:
+  hello-job:
     docker:
-      - image: circleci/node:14.17.0  # Use the appropriate Node.js version
+      - image: cimg/node:17.2.0               # the primary container, where your job's commands are run
     steps:
-      - checkout  # Checkout your code from the repository
-      - run:
-          name: Install Dependencies
-          command: npm install  # Install project dependencies
-      - run:
-          name: Database Setup
-          command: |
-            # Set up your database here (e.g., create schema, tables)
-            # Example: mysql -u root -e "CREATE DATABASE my_database;"
-            # Example: mysql -u root my_database < path/to/initial_data.sql
-      - run:
-          name: Web Server Setup
-          command: |
-            # Start your web server here
-            # Example: npm start
-            # Example: node server.js
-      - run:
-          name: Run Tests
-          command: npm test  # Run tests against the web server and database
+      - checkout                              # check out the code in the project directory
+      - run: echo "hello world"               # print 'hello world'
+
+workflows:
+  my-workflow:                                # Name of the workflow. You can additional workflows below.
+    jobs:                                     # The jobs to run as part of this workflow
+      - hello-job                             # Example 'hello world' job.
