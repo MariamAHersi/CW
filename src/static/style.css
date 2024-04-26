@@ -1,62 +1,59 @@
-/* styles.css */
-body {
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    margin: auto;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button[type="submit"] {
-    background-color: #db7fb9;
-    color: rgb(212, 118, 184);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #db7fb9;
-  }
-  
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-  
-  img.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  /* Media query for mobile devices */
-  @media screen and (max-width: 600px) {
-    .container {
-      width: 100%;
-    }
-  }
-  
+.reports-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.reports-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.report-item {
+  flex: 1 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+}
+
+.report-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+.report-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.report-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.report-card h3 {
+  margin: 16px;
+  font-size: 1.25rem;
+}
+
+.button {
+  background-color: #5c6bc0;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #3949ab;
+}
+
+    
