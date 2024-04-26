@@ -1,20 +1,32 @@
-extends layout.pug 
+doctype html
+html
+  head
+    title Login Page
+    link(rel='stylesheet', href='styles.css')
+    // Include any other meta tags, scripts or styles
+  body
+    .container
+      .login-container
+        .header
+          h1 UrbanPulse
+          .logo-circle
+            // Include your logo here, if you have an image you can use img(src='path-to-your-logo.png')
+        form(action='/login', method='post')
+          .input-group
+            label(for='username') Username
+            input#username(type='text', placeholder='Enter your username', name='username', required)
+          .input-group
+            label(for='password') Password
+            input#password(type='password', placeholder='Enter your password', name='password', required)
+          button(type='submit') LOG IN
+          .social-media-links
+            a(href='https://linkedin.com', target='_blank')
+              // Include your LinkedIn icon here
+            a(href='https://instagram.com', target='_blank')
+              // Include your Instagram icon here
+            a(href='https://yourwebsite.com', target='_blank')
+              // Include your X icon here (or another social media icon)
+      .footer
+        // Include any footer content here
 
-block content
-  section.container
-    h2 Login
-
-    // Display error message if present
-    if error
-      p.error= error
-
-    // Login form
-    form(action="/login", method="post")
-      label(for="username") Username:
-      input(type="text", id="username", name="username", placeholder="Enter your username", required)
-      
-      label(for="password") Password:
-      input(type="password", id="password", name="password", placeholder="Enter your password", required)
-      
-      button(type="submit") Login
 
