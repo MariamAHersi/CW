@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     font-family: Arial, sans-serif;
   }
   
@@ -28,8 +28,8 @@ body {
   }
   
   button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #db7fb9;
+    color: rgb(212, 118, 184);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -39,7 +39,7 @@ body {
   }
   
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #db7fb9;
   }
   
   .imgcontainer {
