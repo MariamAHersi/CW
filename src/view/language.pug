@@ -1,0 +1,21 @@
+extends layout
+
+block head
+  link(rel="stylesheet", href="/style.css")
+
+block content
+  h2 Languages Report
+  table.report-table
+    thead
+      tr
+        th Country Code
+        th Language
+        th Is Official
+        th Percentage
+    tbody
+      each language in languages
+        tr
+          td #{language.CountryCode}
+          td #{language.Language}
+          td #{language.IsOfficial}
+          td #{language.Percentage.toFixed(1)}%
