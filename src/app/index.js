@@ -12,6 +12,9 @@ app.set('view engine', 'pug');
 //Serve assets from 'static' folder
 app.use(express.static("static"));
 
+//Serve assets from 'public' folder
+app.use(express.static("public"));
+
 // Dummy users for authentication (replace with your actual logic)
 const users = [
   { username: "user1", password: "password1" },
