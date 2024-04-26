@@ -1,0 +1,23 @@
+extends layout
+
+block head
+  link(rel="stylesheet", href="/style.css")
+
+block content
+  h2 Countries Report
+  table.report-table
+    thead
+      tr
+        th Code
+        th Name
+        th Continent
+        th Population
+        th Capital
+    tbody
+      each country in countries
+        tr
+          td #{country.Code}
+          td #{country.Name}
+          td #{country.Continent}
+          td #{country.Population.toLocaleString()}
+          td #{country.Capital}
