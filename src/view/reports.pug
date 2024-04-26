@@ -1,24 +1,38 @@
-extends layout.pug 
+extends layout
 
 block content
-  section.container
-    ul
-      li
-        img(src="country_image.jpg", alt="Country Report Image", class="report-image")
-        button(type="button" onclick="location.href='/report/country'") Country Report
-      li
-        img(src="city_image.jpg", alt="City Report Image", class="report-image")
-        button(type="button" onclick="location.href='/cities'") City Report
-      li
-        img(src="continent_image.jpg", alt="Continent Report Image", class="report-image")
-        button(type="button" onclick="location.href='/report/continent'") Continent Report
-      li
-        img(src="region_image.jpg", alt="Region Report Image", class="report-image")
-        button(type="button" onclick="location.href='/report/region'") Region Report
-      li
-        img(src="capital_city_image.jpg", alt="Capital City Report Image", class="report-image")
-        button(type="button" onclick="location.href='/report/capital-city'") Capital City Report
-      li
-        img(src="language_image.jpg", alt="Language Report Image", class="report-image")
-        button(type="button" onclick="location.href='/report/language'") Language Report
+  section.reports-container
+    h2 Dashboard
+    ul.reports-list
+      li.report-item
+        .report-card
+          img(src="country_image.jpg", alt="Country Report")
+          h3 Country Report
+          a.button(href="/report/country") View Report
+      li.report-item
+        .report-card
+          img(src="city_image.jpg", alt="City Report")
+          h3 City Report
+          a.button(href="/cities") View Report
+      li.report-item
+        .report-card
+          img(src="continent_image.jpg", alt="Continent Report")
+          h3 Continent Report
+          a.button(href="/report/continent") View Report
+      li.report-item
+        .report-card
+          img(src="region_image.jpg", alt="Region Report")
+          h3 Region Report
+          a.button(href="/report/region") View Report
+      li.report-item
+        .report-card
+          img(src="capital_city_image.jpg", alt="Capital City Report")
+          h3 Capital City Report
+          a.button(href="/report/capital-city") View Report
+      li.report-item
+        .report-card
+          img(src="language_image.jpg", alt="Language Report")
+          h3 Language Report
+          a.button(href="/report/language") View Report
+
 
