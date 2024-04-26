@@ -1,5 +1,3 @@
-import mysql from "mysql/promises";
-
 /* Import dependencies */
 const express = require("express");
 const mysql = require("mysql2");
@@ -13,6 +11,12 @@ app.set('view engine', 'pug');
 
 //Serve assets from 'static' folder
 app.use(express.static("static"));
+
+// Dummy users for authentication (replace with your actual logic)
+const users = [
+  { username: "user1", password: "password1" },
+  { username: "user2", password: "password2" }
+];
 
 // Login route
 app.post('/login', (req, res) => {
@@ -30,31 +34,40 @@ app.post('/login', (req, res) => {
   }
 });
 
-// Create a route for root
+// Create a route for login page 
 app.get("/login", (req, res) => {
   res.render("login");
 });
 
-// Create a route for root
+// Create a route for home page 
 app.get("/home", (req, res) => {
   res.render("home");
 });
 
-// Create a route for root
+// Create a route for reports page 
 app.get("/reports", (req, res) => {
   res.render("reports");
 });
 
+// Create a route for cities page
 app.get("/cities", async (req, res) => {
   try { 
-    const [rows, field] = await db.execute("SELECT * FROM `city`");
-    return res.render("cities", {rows, fields});
+    const connection = await mysql.createConnection({
+      host: 'localhost',
+      user: 'your_username',
+      password: 'your_password',
+      database: 'your_database'
+    });
+
+    const [rows, fields] = await connection.execute("SELECT * FROM `city`");
+    await connection.end(); // Close the connection after query execution
+    return res.render("cities", { rows, fields });
   } catch(err) {
     console.error(err);
   }
 });
 
-// Create a route for root
+// Create a route for about page 
 app.get("/about", (req, res) => {
   res.render("about");
 });
