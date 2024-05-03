@@ -1,19 +1,23 @@
-extends layout.pug
+extends layout
 
 block head
-  link(rel="stylesheet", href="/cities.css")
+  link(rel="stylesheet", href="/style.css")
 
 block content
-  h2 Cities
-  table
+  h2 Cities Report
+  table.report-table
     thead
-      th.text-center 
-      th City
-      th.number Population 
+      tr
+        th ID
+        th Name
+        th Country Code
+        th District
+        th Population
     tbody
-      each row in rows 
-       tr
-         td.fit #(row.CountryCode)
-         td #(row.Name)
-         - const population = new Intl.NumberFormat().format(row.Population);
-         td.fit.number #{population}
+      each city in cities
+        tr
+          td #{city.ID}
+          td #{city.Name}
+          td #{city.CountryCode}
+          td #{city.District}
+          td #{city.Population.toLocaleString()}

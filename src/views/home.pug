@@ -1,10 +1,17 @@
-extends layout.pug
+extends layout
 
 block content
-  section.container
-    h2 Welcome to UrbanPulse
-    p Your Source for Population Insights.
-    img(src="home_image.jpg", alt="Home Image", class="home-image")
-    p Urban Pulse is your go-to platform for accessing comprehensive population data and statistics with ease.
-    p Developed by our team, we're dedicated to simplifying the way you explore and analyze population trends.
-    a.button(href="/reports") Explore Reports
+  section.container.home
+    .welcome-message
+      h2 Welcome to UrbanPulse
+      p Your Source for Population Insights.
+    
+    .home-image-container
+      img(src="home_image.jpg", alt="Urban scene", class="home-image")
+    
+    .introduction
+      p Urban Pulse is your go-to platform for accessing comprehensive population data and statistics with ease. 
+      p Developed by our team, we're dedicated to simplifying the way you explore and analyze population trends.
+    
+    .cta-button
+      a.button(href="/reports") Explore Reports
